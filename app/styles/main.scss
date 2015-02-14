@@ -72,9 +72,23 @@ img#main-logo {
   }
 }
 
+section#main {
+  nav {
+    width: 90%;
+    margin-left: 10%;
+    position: fixed;
+    padding: 0;
 
+    li {
+      list-style-type: none;
+
+      display: table-cell;
+      width: 1%;
+      padding: 10px;
+    }
   }
 
+}
 
 @keyframes load {
   to {
