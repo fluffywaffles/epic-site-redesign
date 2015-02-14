@@ -1,2 +1,13 @@
 /* jshint devel:true */
-console.log('\'Allo \'Allo!');
+
+var loaderImg = $('img#main-logo');
+
+$('#page-loader').click(function() {
+  var overlay = $(this);
+  overlay.addClass('animate');
+  loaderImg.addClass('animate');
+
+  setTimeout(function() {
+    overlay.addClass('loaded');
+  }, 2000);
+});
