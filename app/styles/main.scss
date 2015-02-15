@@ -162,11 +162,11 @@ section#main {
 
 @keyframes load {
   50% {
-    opacity: 1;
+    top: 0;
   }
 
   to {
-    opacity: 0;
+    top: -100%;
   }
 }
 
