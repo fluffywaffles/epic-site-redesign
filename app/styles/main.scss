@@ -3,24 +3,8 @@
 
 // @imports
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
-// fonts
-$default-font-family: 'Lato', Helvetica, sans-serif;
-
-// colors
-$classy-dark: #404040;
-$epic-red:    #d42a34;
-$off-white:   #efefef;
-
-// loader positioning
-$loader-content-top-offset: 35%;
-$loader-logo-width: 420px;
-$loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
-$loader-logo-left: $loader-logo-top;
-$loader-logo-anim-left: calc(50% - #{$loader-logo-width}/2 - 250px);
-
-// misc
-$text-shadow-subtle-drop: 0 3px 3px rgba(0,0,0,0.3);
+@import 'vars.scss';
+@import 'anim.scss';
 
 html, body {
   width: 100%;
@@ -102,7 +86,7 @@ h1 {
   text-shadow: $text-shadow-subtle-drop;
 
   &.animate {
-    animation: load-title--1 0.9s ease-in-out
+    animation: load-title--1 0.9s ease-out
              , load-title--2 0.9s ease-in-out 0.9s;
   }
 
@@ -115,7 +99,7 @@ h1 {
 .subtitle {
   @extend .title;
   top: $loader-logo-top;
-  margin-top: 10rem;
+  margin-top: 10.25rem;
   // WARN(jordan): magic number
   font-size: 2.4rem;
 }
@@ -149,12 +133,13 @@ section#main {
 
   nav {
 
-    width: 90%;
+    width: 95%;
 
-    margin-left: 7%;
-    padding: 0;
+    margin: 0 0 0 5%;
 
     position: fixed;
+
+    text-align: center;
 
     li {
       list-style-type: none;
@@ -181,69 +166,6 @@ section#main {
     left: -1920px;
     right: -1920px;
     bottom: -1080px;
-  }
-}
-
-@keyframes load {
-  to {
-    top: -100%;
-  }
-}
-
-@keyframes load-img--1 {
-  from {
-    top:  $loader-logo-top;
-    left: $loader-logo-left;
-    width: $loader-logo-width;
-    transform: rotate(0deg);
-  }
-
-  to {
-    top: $loader-logo-top;
-    left: $loader-logo-anim-left;
-    width: $loader-logo-width;
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes load-img--2 {
-  from {
-    top: $loader-logo-top;
-    left: $loader-logo-anim-left;
-    width: $loader-logo-width;
-    transform: rotate(0deg);
-  }
-  to {
-    top: 15px;
-    left: 10px;
-    width: 50px;
-    transform: rotate(-90deg);
-  }
-}
-
-@keyframes load-title--1 {
-  0% {
-    opacity: 0;
-    left: $loader-logo-left;
-  }
-
-  15% {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    left: 45%;
-  }
-}
-
-@keyframes load-title--2 {
-  from {
-    opacity: 1;
-    left: 45%;
-  }
-  to {
-    opacity: 1;
-    left: $loader-logo-left;
+    z-index: -1;
   }
 }
