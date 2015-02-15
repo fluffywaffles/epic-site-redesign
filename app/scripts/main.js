@@ -1,6 +1,6 @@
 /* jshint devel:true */
 
-var video     = $('section#main video');
+var video = $('section#main video');
 
 var loaderComponents = $('#loader-underlay, .curtain, #main-logo, .title, .subtitle');
 
@@ -18,15 +18,19 @@ var loaderOverlay = $('#loader-overlay');
 
 loaderOverlay.on('hike', function(e, hikeAmount) {
   loaderOverlay.newMaxHeight = (loaderOverlay.newMaxHeight || 100) - hikeAmount;
+
   if (loaderOverlay.newMaxHeight < 0) {
     loaderOverlay.newMaxHeight = 0;
     clearInterval(simulateLoading);
     $('body').trigger('reveal');
   }
+
   loaderOverlay.css({ maxHeight: loaderOverlay.newMaxHeight + '%' });
 });
 
+// TODO(jordan): loading simulation. Should replace with real load.
 var simulateLoading = setInterval(function() {
+  // 1/2 the time, load by between 1 and 8 %
   if(Math.random() > 0.5) {
     loaderOverlay.trigger('hike', (Math.random() + 1) * 4);
   }
