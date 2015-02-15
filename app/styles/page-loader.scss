@@ -10,7 +10,7 @@
   background: $epic-red; //$classy-dark;
 
   &.animate {
-    animation: 0.9s load ease-in-out 0.9s;
+    animation: 0.9s fly-out-up ease-in-out 0.9s;
   }
 
   &.loaded {
