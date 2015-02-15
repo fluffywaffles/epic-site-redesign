@@ -77,7 +77,15 @@
 
   &.loaded {
     opacity: 1;
-    animation: title-flux-3 5s linear infinite alternate;
+    $shadow-load-time: 1.5s;
+    $load-shadow-props: $shadow-load-time linear 1;
+    $flux-props: 4s ease-in-out $shadow-load-time infinite alternate;
+    animation: title-load-shadow $load-shadow-props
+             , title-flux $flux-props;
+    .subtitle {
+      animation: subtitle-load-shadow $load-shadow-props
+               , subtitle-flux $flux-props;
+    }
   }
 }
 

@@ -58,7 +58,7 @@
   }
 }
 
-@keyframes title-flux {
+@keyframes title-load-shadow {
   from {
     text-shadow: none;
   }
@@ -74,6 +74,66 @@
       , 8px 8px 0 $epic-red
       , 9px 9px 0 $epic-red
       , 10px 10px 0 $epic-red;
+  }
+}
+
+@keyframes subtitle-load-shadow {
+  from {
+    text-shadow: none;
+  }
+
+  to {
+    text-shadow: 1px 1px 0 $epic-red
+      , 2px 2px 0 $epic-red
+      , 3px 3px 0 $epic-red
+      , 4px 4px 0 $epic-red
+      , 5px 5px 0 $epic-red;
+  }
+}
+
+@keyframes title-flux {
+  from {
+    text-shadow: 1px 1px 0 $epic-red
+      , 2px 2px 0 $epic-red
+      , 3px 3px 0 $epic-red
+      , 4px 4px 0 $epic-red
+      , 5px 5px 0 $epic-red
+      , 6px 6px 0 $epic-red
+      , 7px 7px 0 $epic-red
+      , 8px 8px 0 $epic-red
+      , 9px 9px 0 $epic-red
+      , 10px 10px 0 $epic-red;
+  }
+
+  to {
+    text-shadow: -1px 1px 0 $epic-red
+      , -2px 2px 0 $epic-red
+      , -3px 3px 0 $epic-red
+      , -4px 4px 0 $epic-red
+      , -5px 5px 0 $epic-red
+      , -6px 6px 0 $epic-red
+      , -7px 7px 0 $epic-red
+      , -8px 8px 0 $epic-red
+      , -9px 9px 0 $epic-red
+      , -10px 10px 0 $epic-red;
+  }
+}
+
+@keyframes subtitle-flux {
+  from {
+    text-shadow: 1px 1px 0 $epic-red
+      , 2px 2px 0 $epic-red
+      , 3px 3px 0 $epic-red
+      , 4px 4px 0 $epic-red
+      , 5px 5px 0 $epic-red;
+  }
+
+  to {
+    text-shadow: -1px 1px 0 $epic-red
+      , -2px 2px 0 $epic-red
+      , -3px 3px 0 $epic-red
+      , -4px 4px 0 $epic-red
+      , -5px 5px 0 $epic-red;
   }
 }
 
