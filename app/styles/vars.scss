@@ -9,9 +9,12 @@ $off-white:   #efefef;
 
 // loader positioning
 $loader-content-top-offset: 35%;
-$loader-logo-width: 420px;
+$loader-logo-width: 300px;
+$loader-title-width: 420px;
 // WARN(jordan): calc
 $loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
 $loader-logo-left: $loader-logo-top;
 // WARN(jordan): calc
-$loader-logo-anim-left: calc(50% - #{$loader-logo-width}/2 - 260px);
+$loader-logo-anim-left: calc(50% - (#{$loader-logo-width} + #{$loader-title-width}) / 2);
+$loader-title-left: calc(50% - (#{$loader-title-width} / 2));
+$loader-title-anim-left: calc(50% + (#{$loader-logo-width} - #{$loader-title-width}) / 2);

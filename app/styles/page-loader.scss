@@ -20,9 +20,9 @@
 }
 
 .title {
-  width: $loader-logo-width;
+  width: 420px;
 
-  margin-top: 75px;
+  margin-top: 0.5rem;
 
   display: block;
   opacity: 0;
@@ -33,13 +33,13 @@
 
   position: absolute;
   top: $loader-logo-top;
-  left: $loader-logo-left;
+  left: $loader-title-left;
   z-index: 2;
 
   color: $off-white;
 
   &.animate {
-    animation: load-title--1 0.9s ease-out
+    animation: load-title--1 0.9s linear
              , load-title--2 0.9s ease-in-out 0.9s;
   }
 
@@ -52,7 +52,8 @@
 .subtitle {
   @extend .title;
   top: $loader-logo-top;
-  margin-top: 10.25rem;
+  // NOTE(jordan): from .title
+  margin-top: 8rem;
   // WARN(jordan): magic number
   font-size: 2.4rem;
 }
