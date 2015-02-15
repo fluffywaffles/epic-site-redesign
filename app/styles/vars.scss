@@ -1,5 +1,6 @@
 // fonts
 $default-font-family: 'Lato', Helvetica, sans-serif;
+$font-color: #333;
 
 // colors
 $classy-dark: #404040;
@@ -14,6 +15,3 @@ $loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
 $loader-logo-left: $loader-logo-top;
 // WARN(jordan): calc
 $loader-logo-anim-left: calc(50% - #{$loader-logo-width}/2 - 260px);
-
-// misc
-$text-shadow-subtle-drop: 0 3px 3px rgba(0,0,0,0.3);

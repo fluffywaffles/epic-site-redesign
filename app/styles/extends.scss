@@ -1,4 +1,6 @@
 .centering-hack {
+  // from @elleestcrimi 's answer to
+  // http://stackoverflow.com/questions/14562457/center-oversized-image-in-div
   margin: auto;
   position: absolute;
   top: -1080px;

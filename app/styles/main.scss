@@ -23,13 +23,13 @@ body {
   background: #fafafa;
 
   font-family: $default-font-family;
-  color: #333;
+  color: $font-color;
 }
 
 h1,h2,h3,h4,h5,h6 {
   small {
     font-size: 50%;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -84,7 +84,6 @@ h1 {
   z-index: 2;
 
   color: $off-white;
-  text-shadow: $text-shadow-subtle-drop;
 
   &.animate {
     animation: load-title--1 0.9s ease-out
@@ -94,6 +93,7 @@ h1 {
   &.loaded {
     opacity: 1;
     left: $loader-logo-left;
+    animation: title-flux 3s ease-in-out infinite alternate;
   }
 }
 
