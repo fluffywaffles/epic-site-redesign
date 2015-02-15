@@ -1,0 +1,37 @@
+html, body {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+
+  overflow-x: hidden;
+
+  font-size: 18pt;
+  font-weight: 400;
+}
+
+body {
+  background: #fafafa;
+
+  font-family: $default-font-family;
+  color: $font-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  small {
+    font-size: 50%;
+    font-weight: 400;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+
+  background: #ccc;
+  color: #000;
+}
