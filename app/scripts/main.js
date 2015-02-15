@@ -5,7 +5,7 @@ var video     = $('section#main video');
 var loaderComponents = $('#loader-underlay, .curtain, #main-logo, .title, .subtitle');
 
 $('body').on('reveal', function() {
-  loaderComponents.addClass('animate');
+  loaderComponents.addClass('animate load-animation');
 
   video[0].play();
 

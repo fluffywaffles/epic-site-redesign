@@ -9,13 +9,13 @@
 
   background: $epic-red; //$classy-dark;
 
-  &.animate {
+  &.animate.load-animation {
     animation: 0.9s fly-out-up ease-in-out 0.9s;
-  }
 
-  &.loaded {
-    // after anim-duration
-    display: none;
+    &.loaded {
+      // after anim-duration
+      display: none;
+    }
   }
 }
 
@@ -51,7 +51,7 @@
             , 0s opacity 0.9s linear;
 }
 
-#main-logo.animate {
+#main-logo.animate.load-animation {
   img {
     animation: 0.9s load-img--1 ease-in-out forwards
       , 0.9s load-img--2 ease-in-out 0.9s forwards;
@@ -71,7 +71,7 @@
 }
 
 .title {
-  &.animate {
+  &.animate.load-animation {
     animation: load-title--1 0.9s linear
              , load-title--2 0.9s ease-in-out 0.9s;
 
