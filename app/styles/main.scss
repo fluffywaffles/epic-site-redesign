@@ -72,6 +72,8 @@ section#main {
 .title {
   width: $loader-title-width;
 
+  margin-top: 0.5rem;
+
   position: absolute;
   top: $loader-logo-top;
   left: $loader-title-left;
@@ -87,13 +89,10 @@ section#main {
 }
 
 .main-title {
-  margin-top: 0.25rem;
-
   font-size: 8rem;
 }
 
 .subtitle {
-  @extend .main-title;
   // NOTE(jordan): from .title: -1 * font-size
   margin-top: -1.33rem;
   // WARN(jordan): 0.1875 * .title font-size
