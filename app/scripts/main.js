@@ -28,6 +28,6 @@ loaderOverlay.on('hike', function(e, hikeAmount) {
 
 var simulateLoading = setInterval(function() {
   if(Math.random() > 0.5) {
-    loaderOverlay.trigger('hike', Math.random() * 10);
+    loaderOverlay.trigger('hike', (Math.random() + 1) * 4);
   }
 }, 100);
