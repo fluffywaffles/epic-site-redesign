@@ -60,13 +60,12 @@
   to {
     opacity: 1;
     left: $loader-logo-left;
-    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
   }
 }
 
 @keyframes title-flux {
   from {
-    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    text-shadow: none;
   }
 
   to {
@@ -85,7 +84,7 @@
 
 @keyframes title-flux-3 {
   from {
-    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    text-shadow: none;
   }
 
   33% {
@@ -116,13 +115,13 @@
   }
 
   100% {
-    text-shadow: 0 3px p3x rgba(0,0,0,0.3);
+    text-shadow: none;
   }
 }
 
 @keyframes title-flux-4 {
   from {
-    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    text-shadow: none;
   }
 
   25% {
@@ -167,6 +166,6 @@
   }
 
   100% {
-    text-shadow: 0 3px p3x rgba(0,0,0,0.3);
+    text-shadow: none;
   }
 }
