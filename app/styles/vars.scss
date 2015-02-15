@@ -9,8 +9,10 @@ $off-white:   #efefef;
 // loader positioning
 $loader-content-top-offset: 35%;
 $loader-logo-width: 420px;
+// WARN(jordan): calc
 $loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
 $loader-logo-left: $loader-logo-top;
+// WARN(jordan): calc
 $loader-logo-anim-left: calc(50% - #{$loader-logo-width}/2 - 260px);
 
 // misc

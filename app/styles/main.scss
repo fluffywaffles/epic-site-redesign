@@ -4,6 +4,7 @@
 // @imports
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import 'vars.scss';
+@import 'extends.scss';
 @import 'anim.scss';
 
 html, body {
@@ -160,12 +161,7 @@ section#main {
   }
 
   video {
-    margin: auto;
-    position: absolute;
-    top: -1080px;
-    left: -1920px;
-    right: -1920px;
-    bottom: -1080px;
+    @extend .centering-hack;
     z-index: -1;
   }
 }
