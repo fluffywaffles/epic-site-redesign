@@ -1,13 +1,10 @@
 /* jshint devel:true */
 
-var loaderImg = $('img#main-logo');
 var video     = $('section#main video');
-var underlay  = $('#loader-underlay');
-var titles    = $('.title, .subtitle');
 
 var loaderComponents = $('#loader-underlay, .curtain, #main-logo, .title, .subtitle');
 
-loaderComponents.click(function() {
+$('body').on('reveal', function() {
   loaderComponents.addClass('animate');
 
   video[0].play();
@@ -16,3 +13,21 @@ loaderComponents.click(function() {
     loaderComponents.addClass('loaded');
   }, 1800);
 });
+
+var loaderOverlay = $('#loader-overlay');
+
+loaderOverlay.on('hike', function(e, hikeAmount) {
+  loaderOverlay.newMaxHeight = (loaderOverlay.newMaxHeight || 100) - hikeAmount;
+  if (loaderOverlay.newMaxHeight < 0) {
+    loaderOverlay.newMaxHeight = 0;
+    clearInterval(simulateLoading);
+    $('body').trigger('reveal');
+  }
+  loaderOverlay.css({ maxHeight: loaderOverlay.newMaxHeight + '%' });
+});
+
+var simulateLoading = setInterval(function() {
+  if(Math.random() > 0.5) {
+    loaderOverlay.trigger('hike', Math.random() * 10);
+  }
+}, 100);

@@ -19,6 +19,18 @@
   }
 }
 
+#loader-overlay {
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.85);
+  position: absolute;
+  z-index: 4;
+
+  transition: 0.3s max-height ease;
+}
+
+
 // fancy hack for hiding .title while animating
 #main-logo::before {
   content: '.';
@@ -35,8 +47,8 @@
 
   background: $epic-red;
 
-  transition: 0.9s ease-in-out max-width
-            , 0s linear opacity 0.9s;
+  transition: 0.9s max-width ease-in-out
+            , 0s opacity 0.9s linear;
 }
 
 #main-logo.animate {
