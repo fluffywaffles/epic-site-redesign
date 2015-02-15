@@ -15,9 +15,8 @@ $off-white:   #efefef;
 // loader positioning
 $loader-content-top-offset: 35%;
 $loader-logo-width: 35%;
-$title-top-offset: $loader-content-top-offset + ($loader-logo-width / 2);
-$loader-logo-top: $title-top-offset - $loader-logo-width;
-$loader-logo-left: (100% - $loader-logo-width) / 2;
+$loader-logo-top: 50% - ($loader-logo-width / 2);
+$loader-logo-left: $loader-logo-top;
 
 // misc
 $text-shadow-subtle-drop: 0 3px 3px rgba(0,0,0,0.3);
@@ -27,6 +26,8 @@ html, body {
   height: 100%;
 
   margin: 0;
+
+  overflow-x: hidden;
 
   font-size: 18pt;
 }
@@ -68,36 +69,50 @@ h1 {
 
   background: $classy-dark;
 
-  .title {
-    width: 400px;
-
-    margin: 0 auto;
-
-    display: block;
-
-    font-size: 6rem;
-
-    position: relative;
-    top: $title-top-offset;
-
-    color: $off-white;
-    text-align: center;
-    text-shadow: $text-shadow-subtle-drop;
-  }
-
-  .subtitle {
-    @extend .title;
-    font-size: 1.8rem;
-  }
-
   &.animate {
-    animation: 2s load ease-in-out;
+    animation: 1.8s load ease-in-out;
   }
 
   &.loaded {
     // after anim-duration
     display: none;
   }
+}
+
+.title {
+  width: 50%;
+
+  margin: 3% 0;
+
+  display: block;
+  opacity: 0;
+
+  font-size: 6rem;
+
+  position: absolute;
+  top: $loader-logo-top + 5%;
+  left: $loader-logo-left;
+  z-index: 2;
+
+  color: $off-white;
+  text-shadow: $text-shadow-subtle-drop;
+
+  &.animate {
+    animation: 1.8s load--title ease-in-out;
+  }
+
+  &.loaded {
+    opacity: 1;
+    left: $loader-logo-left;
+  }
+}
+
+.subtitle {
+  @extend .title;
+  top: $loader-logo-top + 19%;
+  // WARN(jordan): magic number
+  padding-left: 2.7%;
+  font-size: 1.8rem;
 }
 
 img#main-logo {
@@ -116,7 +131,7 @@ img#main-logo {
     top: 10px;
     left: 10px;
 
-    animation: 1.8s load-img ease-in-out;
+    animation: 1.8s load--img ease-in-out;
     transform: rotate(-90deg);
   }
 }
@@ -146,15 +161,26 @@ section#main {
 }
 
 @keyframes load {
+  50% {
+    opacity: 1;
+  }
+
   to {
     opacity: 0;
   }
 }
 
-@keyframes load-img {
+@keyframes load--img {
   from {
-    top:  ($loader-content-top-offset*2 - $loader-logo-width) / 2;
-    left: (100% - $loader-logo-width) / 2;
+    top:  $loader-logo-top;
+    left: $loader-logo-left;
+    width: $loader-logo-width;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    top: $loader-logo-top;
+    left: $loader-logo-left - 20%;
     width: $loader-logo-width;
     transform: rotate(0deg);
   }
@@ -164,5 +190,22 @@ section#main {
     left: 10px;
     width: 50px;
     transform: rotate(-90deg);
+  }
+}
+
+@keyframes load--title {
+  10% {
+    opacity: 0;
+    left: $loader-logo-left;
+  }
+
+  50% {
+    opacity: 1;
+    left: 50%;
+  }
+
+  100% {
+    opacity: 1;
+    left: $loader-logo-left;
   }
 }

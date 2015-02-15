@@ -2,15 +2,17 @@
 
 var loaderImg = $('img#main-logo');
 var video     = $('section#main video');
+var underlay  = $('#page-loader');
+var titles    = $('.title, .subtitle');
 
-$('#page-loader').click(function() {
-  var overlay = $(this);
-  overlay.addClass('animate');
-  loaderImg.addClass('animate');
+var loaderComponents = $('#page-loader, img#main-logo, .title, .subtitle');
+
+loaderComponents.click(function() {
+  loaderComponents.addClass('animate');
 
   video[0].play();
 
   setTimeout(function() {
-    overlay.addClass('loaded');
-  }, 2000);
+    loaderComponents.addClass('loaded');
+  }, 1800);
 });
