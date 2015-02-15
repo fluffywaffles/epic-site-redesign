@@ -30,4 +30,5 @@ var simulateLoading = setInterval(function() {
   if(Math.random() > 0.5) {
     loaderOverlay.trigger('hike', (Math.random() + 1) * 4);
   }
-}, 100);
+  // NOTE(jordan): Chad likes 75ms best. I'll humor Chad, he's a good guy.
+}, 75);
