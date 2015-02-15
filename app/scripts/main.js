@@ -2,10 +2,10 @@
 
 var loaderImg = $('img#main-logo');
 var video     = $('section#main video');
-var underlay  = $('#page-loader');
+var underlay  = $('#loader-underlay');
 var titles    = $('.title, .subtitle');
 
-var loaderComponents = $('#page-loader, img#main-logo, .title, .subtitle');
+var loaderComponents = $('#loader-underlay, .curtain, #main-logo, .title, .subtitle');
 
 loaderComponents.click(function() {
   loaderComponents.addClass('animate');

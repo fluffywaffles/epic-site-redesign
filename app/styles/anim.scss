@@ -41,10 +41,6 @@
     left: $loader-logo-anim-left;
   }
 
-  40% {
-    opacity: 0;
-  }
-
   to {
     opacity: 1;
     left: $loader-title-anim-left;

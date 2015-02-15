@@ -51,3 +51,47 @@ section#main {
     z-index: -1;
   }
 }
+
+#main-logo img {
+  width: $loader-logo-width;
+
+  position: absolute;
+  top: $loader-logo-top;
+  left: $loader-logo-left;
+  z-index: 2;
+
+  display: block;
+
+  // NOTE(jordan): firefox/chrome/safari image quality specifier
+  image-rendering: crisp-edges;
+}
+
+.title {
+  width: $loader-title-width;
+
+  position: absolute;
+  top: $loader-logo-top;
+  left: $loader-title-left;
+  z-index: 1;
+
+  display: block;
+  opacity: 0;
+
+  font-weight: bold;
+  text-align: center;
+
+  color: $off-white;
+}
+
+.main-title {
+  margin-top: 0.25rem;
+  font-size: 8rem;
+}
+
+.subtitle {
+  @extend .main-title;
+  // NOTE(jordan): from .title: -1 * font-size
+  margin-top: -1.33rem;
+  // WARN(jordan): 0.1875 * .title font-size
+  font-size: 1.33rem;
+}
