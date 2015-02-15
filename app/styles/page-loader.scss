@@ -23,9 +23,10 @@
   width: 100%;
   height: 100%;
 
-  background: rgba(0,0,0,0.66);
   position: absolute;
   z-index: 4;
+
+  background: rgba(0,0,0,0.66);
 
   transition: 0.3s max-height ease;
 }
@@ -34,18 +35,17 @@
 // fancy hack for hiding .title while animating
 #main-logo::before {
   content: '.';
-  color: transparent;
-
-  display: block;
 
   width: 50%;
   max-width: 50%;
   height: 100%;
 
+  display: block;
   position: absolute;
   z-index: 2;
 
   background: $epic-red;
+  color: transparent;
 
   transition: 0.9s max-width ease-in-out
             , 0s opacity 0.9s linear;
@@ -59,13 +59,14 @@
 
   &::before {
     max-width: 25%;
+
     opacity: 0;
   }
-}
 
-#main-logo.loaded {
-  &::before {
-    display: none;
+  &.loaded {
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -73,23 +74,21 @@
   &.animate {
     animation: load-title--1 0.9s linear
              , load-title--2 0.9s ease-in-out 0.9s;
-  }
 
-  &.loaded {
-    opacity: 1;
-    $shadow-load-time: 1.5s;
-    $load-shadow-props: $shadow-load-time linear 1;
-    $flux-props: 4s ease-in-out $shadow-load-time infinite alternate;
-    animation: title-load-shadow $load-shadow-props
-             , title-flux $flux-props;
-    .subtitle {
-      animation: subtitle-load-shadow $load-shadow-props
-               , subtitle-flux $flux-props;
+    &.loaded {
+      $shadow-load-time: 1.5s;
+      $load-shadow-props: $shadow-load-time linear 1;
+      $flux-props: 4s ease-in-out $shadow-load-time infinite alternate;
+
+      opacity: 1;
+
+      animation: title-load-shadow $load-shadow-props
+               , title-flux $flux-props;
+
+      .subtitle {
+        animation: subtitle-load-shadow $load-shadow-props
+                 , subtitle-flux $flux-props;
+      }
     }
-  }
-}
-
-#main-logo img {
-  &.animate {
   }
 }
