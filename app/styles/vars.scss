@@ -14,6 +14,8 @@ $loader-title-width: 420px;
 // WARN(jordan): calc
 $loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
 $loader-logo-left: $loader-logo-top;
+
+// loader anim
 // WARN(jordan): calc
 $loader-logo-anim-left: calc(50% -
   (#{$loader-logo-width} + #{$loader-title-width}) / 2);
