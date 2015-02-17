@@ -92,13 +92,13 @@ section#main {
 }
 
 .title {
-  width: $loader-title-width;
+  width: $title-width;
 
   margin-top: $title-margin-top;
 
   position: absolute;
   top: $loader-logo-top;
-  left: $loader-title-left;
+  left: $title-left;
   z-index: 1;
 
   display: block;
@@ -108,6 +108,10 @@ section#main {
   font-weight: bold;
   text-align: center;
   color: $off-white;
+
+  &.loaded {
+    top: calc(50% - #{$title-font-size / 3});
+  }
 }
 
 .main-title {
@@ -121,4 +125,146 @@ section#main {
   font-size: 0.1875 * $title-font-size;
 }
 
+section#apply {
+  text-align: center;
+
+  overflow: hidden;
+
+  & > h1 {
+    width: 120%;
+    height: 160px;
+
+    margin-top: 3rem;
+    padding-top: 20px;
+
+    position: relative;
+    left: -10%;
+
+    overflow: hidden;
+
+    text-align: center;
+    font-size: 7rem;
+    color: $epic-red;
+
+    line-height: 4.4rem;
+
+    @media #{$small} {
+      height: 177px;
+    }
+
+    @media #{$smed} {
+      width: 130%;
+      left: -15%;
+      height: 85px;
+    }
+
+    @media #{$medium} {
+      height: 97px;
+    }
+  }
+
+  .apply__application {
+    background: $epic-red;
+
+    border-top: 80px solid darken($epic-red, 10%);
+
+    box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
+
+    .main-application {
+      width: 100%;
+      max-width: 1150px;
+
+      margin: 0 auto;
+      margin-top: -15px;
+      padding: 50px 0;
+
+      position: relative;
+
+      box-shadow: //0 -5px 30px rgba(0,0,0,0.5)
+                /*,*/ 15px 0 25px -18px rgba(0,0,0,0.5)
+                , -15px 0 25px -18px rgba(0,0,0,0.5);
+
+      background: darken($off-white, 5%);
+
+      @media #{$small} {
+        width: 85%;
+      }
+
+      @media #{$medium} {
+        width: 80%;
+      }
+
+      .header {
+        color: $epic-red;
+        text-shadow: 2px 2px 0 white
+                   , -2px 2px 0 white;
+      }
+
+      hr {
+        height: 0;
+
+        margin: 50px 0;
+
+        border-color: darken($epic-red, 8%);
+        border-width: 20px;
+        border-style: solid;
+
+        &:before {
+          content: '.';
+
+          width: calc(100% + 40px);
+          height: 30px;
+
+          position: relative;
+          left: -1940px;
+          top: -10px;
+
+          display: block;
+
+          background: transparent;
+          color: transparent;
+
+          border-left: 1920px solid darken($epic-red, 15%);
+          border-right: 1920px solid darken($epic-red, 15%);
+        }
+      }
+
+      .main-application__foot {
+        margin: 100px 0 -50px 0;
+        padding: 100px 0;
+
+        position: relative;
+
+        background: $classy-dark;
+
+        text-shadow: -1px -1px darken($classy-dark, 10%);
+        color: lighten($classy-dark, 10%);
+
+        border-bottom: 5px solid darken($classy-dark, 10%);
+
+        &:before {
+          content: '.';
+
+          width: 100%;
+          height: calc(100% + 5px);
+
+          position: absolute;
+          top: 0;
+          left: -1920px;
+
+          display: block;
+
+          background: transparent;
+
+          color: transparent;
+          text-shadow: none;
+
+          box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+          border-left: 1920px solid darken($classy-dark, 5%);
+          border-right: 1920px solid darken($classy-dark, 5%);
+        }
+      }
+    }
+  }
 }

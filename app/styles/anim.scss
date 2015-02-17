@@ -64,7 +64,9 @@
     opacity: 1;
   }
   to {
-    left: $loader-title-left;
+    left: $title-left;
+
+    top: calc(50% - #{$title-font-size / 3});
 
     opacity: 1;
   }

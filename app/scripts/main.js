@@ -2,7 +2,7 @@
 
 var video = $('section#main video');
 
-var loaderComponents = $('#loader-underlay, .curtain, #main-logo, .title, .subtitle');
+var loaderComponents = $('#loader-underlay, .curtain, #main-logo, .title, .subtitle, header *');
 
 $('body').on('reveal', function() {
   loaderComponents.addClass('animate load-animation');
@@ -11,6 +11,15 @@ $('body').on('reveal', function() {
 
   setTimeout(function() {
     loaderComponents.addClass('loaded');
+
+    setInterval(function() {
+      var current = $('.slogan.current');
+      next = (current.removeClass('current')
+                     .next().hasClass('slogan')
+              ? current.next()
+              : $('.slogan').first());
+      next.addClass('current')
+    }, 3500);
   }, 1800);
 });
 
@@ -36,3 +45,4 @@ var simulateLoading = setInterval(function() {
   }
   // NOTE(jordan): Chad likes 75ms best. I'll humor Chad, he's a good guy.
 }, 75);
+
