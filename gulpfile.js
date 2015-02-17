@@ -102,9 +102,9 @@ gulp.task('wiredep', function () {
     .pipe(wiredep())
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('.tmp/html/**/*.html')
+  gulp.src('app/jade/*.jade')
     .pipe(wiredep())
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('app/jade'));
 });
 
 gulp.task('watch', ['connect'], function () {
