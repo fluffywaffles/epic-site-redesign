@@ -1,0 +1,33 @@
+h1.slogan {
+  width: 100%;
+  height: $title-font-size;
+
+  position: absolute;
+  top: calc(50% - #{$title-font-size * 3/2});
+  left: - 100%;
+
+  opacity: 0;
+
+  text-align: center;
+
+  font-size: $title-font-size;
+  color: $off-white;
+
+  transition: left ease 1s
+            , opacity ease 1s;
+
+  &.loaded {
+    animation: title-load-shadow $load-shadow-props
+             , title-flux $flux-props;
+  }
+
+  &.current {
+    left: 0;
+
+    opacity: 1;
+
+    & ~ h1.slogan {
+      left: 100%;
+    }
+  }
+}
