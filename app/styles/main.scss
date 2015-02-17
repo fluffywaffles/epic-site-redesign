@@ -233,7 +233,7 @@ section#apply {
           height: 30px;
 
           position: relative;
-          left: -1940px;
+          left: -9999px;
           top: -10px;
 
           display: block;
@@ -241,8 +241,8 @@ section#apply {
           background: transparent;
           color: transparent;
 
-          border-left: 1920px solid darken($epic-red, 10%);
-          border-right: 1920px solid darken($epic-red, 10%);
+          border-left: 9979px solid darken($epic-red, 10%);
+          border-right: 9999px solid darken($epic-red, 10%);
         }
       }
 
@@ -267,7 +267,7 @@ section#apply {
 
           position: absolute;
           top: 0;
-          left: -1920px;
+          left: -9999px;
 
           display: block;
 
@@ -278,8 +278,8 @@ section#apply {
 
           box-shadow: 0 0 15px rgba(0,0,0,0.5);
 
-          border-left: 1920px solid darken($classy-dark, 5%);
-          border-right: 1920px solid darken($classy-dark, 5%);
+          border-left: 9999px solid darken($classy-dark, 5%);
+          border-right: 9999px solid darken($classy-dark, 5%);
         }
       }
     }
