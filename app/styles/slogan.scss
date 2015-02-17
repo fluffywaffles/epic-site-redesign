@@ -16,6 +16,12 @@ h1.slogan {
   transition: left ease 1s
             , opacity ease 1s;
 
+  @media #{$medium} {
+    height: 7rem;
+    font-size: 7rem;
+    top: calc(50% - 7rem * 3/2);
+  }
+
   &.loaded {
     animation: title-load-shadow $load-shadow-props
              , title-flux $flux-props;
