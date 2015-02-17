@@ -1,0 +1,92 @@
+@mixin main-logo-img-size-position($width, $top, $left) {
+  width: $width;
+
+  top:   $top;
+  left:  $left;
+}
+
+@mixin title-size-position-loaded($width, $magin-top, $top, $left, $font-size) {
+  width: $width;
+
+  margin-top: $margin-top;
+
+  position: absolute;
+  top: $top;
+  left: $left;
+
+  &.loaded {
+    top: calc(50% - #{$font-size / 3});
+  }
+}
+
+@mixin load-img-anim($width, $top, $left-start, $left-mid) {
+  @keyframes load-img--1 {
+    from {
+      width: $width;
+
+      top:  $top;
+      left: $left-start;
+
+      transform: rotate(0deg);
+    }
+
+    to {
+      width: $width;
+
+      top: $top;
+      left: $left-mid;
+
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes load-img--2 {
+    from {
+      width: $width;
+
+      top: $top;
+      left: $left-mid;
+
+      transform: rotate(0deg);
+    }
+    to {
+      width: 50px;
+
+      top: 20px;
+      left: 25px;
+
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+@mixin load-title-anim($left-start, $left-end, $font-size) {
+  @keyframes load-title--1 {
+    0% {
+      left: $left-start;
+
+      opacity: 0;
+    }
+
+    to {
+      left: $left-start;
+
+      opacity: 1;
+    }
+  }
+
+  @keyframes load-title--2 {
+    from {
+      left: $left-start;
+
+      opacity: 1;
+    }
+    to {
+      left: $left-end;
+
+      top: calc(50% - #{$font-size / 3});
+
+      opacity: 1;
+    }
+  }
+}

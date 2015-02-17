@@ -11,10 +11,10 @@ $off-white:   #f6f6f6;
 
 // loader positioning
 $loader-content-top-offset: 35%;
-$loader-logo-width: 150px;
+$loader-logo-width: $title-font-size * 3 / 2;
 // NOTE(jordan): unit conversion: divide by unit.
 $title-width: #{55 * $title-font-size / 1rem}px;
-$title-margin-top: 0.5rem;
+$title-margin-top: 0.33rem;
 // WARN(jordan): calc
 $loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
 $loader-logo-left: $loader-logo-top;
