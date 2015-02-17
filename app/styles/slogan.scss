@@ -1,16 +1,16 @@
 h1.slogan {
   width: 100%;
-  height: $title-font-size;
+  height: 5rem;
 
   position: absolute;
-  top: calc(50% - #{$title-font-size * 3/2});
+  top: calc(50% - 5rem * 3/2);
   left: - 100%;
 
   opacity: 0;
 
   text-align: center;
 
-  font-size: $title-font-size;
+  font-size: 5rem;
   color: $off-white;
 
   transition: left ease 1s

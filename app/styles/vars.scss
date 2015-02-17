@@ -2,7 +2,7 @@
 $default-font-family: 'Lato', Helvetica, sans-serif;
 $font-color: #333;
 
-$title-font-size: 5rem;
+$title-font-size: 9rem;
 
 // colors
 $classy-dark: #404040;
@@ -10,7 +10,7 @@ $epic-red:    #d42a34;
 $off-white:   #f6f6f6;
 
 // loader positioning
-$loader-logo-width: $title-font-size * 3 / 2;
+$loader-logo-width: $title-font-size * 9 / 8;
 // NOTE(jordan): unit conversion: divide by unit.
 $title-width: #{55 * $title-font-size / 1rem}px;
 $title-margin-top: 0.33rem;
