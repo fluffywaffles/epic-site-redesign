@@ -222,7 +222,7 @@ section#apply {
 
         margin: 50px 0;
 
-        border-color: darken($epic-red, 8%);
+        border-color: $epic-red;
         border-width: 20px;
         border-style: solid;
 
@@ -241,8 +241,8 @@ section#apply {
           background: transparent;
           color: transparent;
 
-          border-left: 1920px solid darken($epic-red, 15%);
-          border-right: 1920px solid darken($epic-red, 15%);
+          border-left: 1920px solid darken($epic-red, 10%);
+          border-right: 1920px solid darken($epic-red, 10%);
         }
       }
 
