@@ -51,16 +51,24 @@
   }
 }
 
-@keyframes load-title--2 {
+@mixin load-title-anim($width, $font-size) {
   from {
     left: $loader-title-anim-left;
   }
 
   to {
-    left: $title-left;
+    left: calc(50% - #{$width / 2});
 
-    top: calc(50% - #{$title-font-size / 3});
+    top: calc(50% - #{$font-size / 3});
   }
+}
+
+@keyframes load-title--2 {
+  @include load-title-anim($title-width, $title-font-size);
+}
+
+@keyframes load-title--2-lg {
+  @include load-title-anim(550px, 10rem);
 }
 
 @keyframes title-load-shadow {

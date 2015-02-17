@@ -111,8 +111,23 @@ section#main {
   text-align: center;
   color: $off-white;
 
+  @media #{$medium} {
+    $new-width : (55px * 10rem / 1rem);
+    $left:        calc(50% - #{$new-width / 2});
+
+    width: $new-width;
+
+    left: calc(50% - #{$new-width / 2});
+
+    font-size: 10rem;
+  }
+
   &.loaded {
     top: calc(50% - #{$title-font-size / 3});
+
+    @media #{$medium} {
+      top: calc(50% - 10rem / 3);
+    }
   }
 }
 
