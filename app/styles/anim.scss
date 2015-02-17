@@ -4,9 +4,73 @@
   }
 }
 
-@include load-img-anim($loader-logo-width, $loader-logo-top, $loader-logo-left, $loader-logo-anim-left);
+@keyframes load-img--1 {
+  from {
+    width: $loader-logo-width;
 
-@include load-title-anim($loader-logo-anim-left, $loader-title-anim-left, $title-left, $title-font-size);
+    top:  $loader-logo-top;
+    left: $loader-logo-left;
+
+    transform: rotate(0deg);
+  }
+
+  to {
+    width: $loader-logo-width;
+
+    top: $loader-logo-top;
+    left: $loader-logo-anim-left;
+
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes load-img--2 {
+  from {
+    width: $loader-logo-width;
+
+    top: $loader-logo-top;
+    left: $loader-logo-anim-left;
+
+    transform: rotate(0deg);
+  }
+  to {
+    width: 50px;
+
+    top: 20px;
+    left: 25px;
+
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes load-title--1 {
+  0% {
+    left: $loader-logo-anim-left;
+
+    opacity: 0;
+  }
+
+  to {
+    left: $loader-title-anim-left;
+
+    opacity: 1;
+  }
+}
+
+@keyframes load-title--2 {
+  from {
+    left: $loader-title-anim-left;
+
+    opacity: 1;
+  }
+  to {
+    left: $title-left;
+
+    top: calc(50% - #{$title-font-size / 3});
+
+    opacity: 1;
+  }
+}
 
 @keyframes title-load-shadow {
   from {
