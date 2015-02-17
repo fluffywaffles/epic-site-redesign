@@ -34,3 +34,8 @@ $shadow-load-time: 1.5s;
 $load-shadow-props: $shadow-load-time linear 1;
 $flux-props: 3.5s ease-in-out $shadow-load-time infinite alternate;
 
+// mqs
+$small:  "(min-width: 550px)";
+$smed:   "(min-width: 750px)";
+$medium: "(min-width: 900px)";
+$large:  "(min-width: 1600px)";
