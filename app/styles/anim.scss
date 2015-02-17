@@ -26,13 +26,9 @@
 
 @keyframes load-img--2 {
   from {
-    width: $loader-logo-width;
-
-    top: $loader-logo-top;
     left: $loader-logo-anim-left;
-
-    transform: rotate(0deg);
   }
+
   to {
     width: 50px;
 
@@ -46,8 +42,6 @@
 @keyframes load-title--1 {
   0% {
     left: $loader-logo-anim-left;
-
-    opacity: 0;
   }
 
   to {
@@ -60,15 +54,12 @@
 @keyframes load-title--2 {
   from {
     left: $loader-title-anim-left;
-
-    opacity: 1;
   }
+
   to {
     left: $title-left;
 
     top: calc(50% - #{$title-font-size / 3});
-
-    opacity: 1;
   }
 }
 

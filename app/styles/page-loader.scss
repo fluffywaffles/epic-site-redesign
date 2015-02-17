@@ -72,8 +72,8 @@
 
 .title {
   &.animate.load-animation {
-    animation: load-title--1 0.9s linear
-             , load-title--2 0.9s ease-in-out 0.9s;
+    animation: load-title--1 0.9s linear forwards
+             , load-title--2 0.9s ease-in-out 0.9s forwards;
 
     &.loaded {
 
