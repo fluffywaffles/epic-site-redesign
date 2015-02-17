@@ -2,15 +2,19 @@
 $default-font-family: 'Lato', Helvetica, sans-serif;
 $font-color: #333;
 
+$title-font-size: 5rem;
+
 // colors
 $classy-dark: #404040;
 $epic-red:    #d42a34;
-$off-white:   #efefef;
+$off-white:   #f6f6f6;
 
 // loader positioning
 $loader-content-top-offset: 35%;
-$loader-logo-width: 300px;
-$loader-title-width: 420px;
+$loader-logo-width: 150px;
+// NOTE(jordan): unit conversion: divide by unit.
+$title-width: #{55 * $title-font-size / 1rem}px;
+$title-margin-top: 0.5rem;
 // WARN(jordan): calc
 $loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
 $loader-logo-left: $loader-logo-top;
@@ -18,7 +22,15 @@ $loader-logo-left: $loader-logo-top;
 // loader anim
 // WARN(jordan): calc
 $loader-logo-anim-left: calc(50% -
-  (#{$loader-logo-width} + #{$loader-title-width}) / 2);
-$loader-title-left: calc(50% - (#{$loader-title-width} / 2));
+  (#{$loader-logo-width} + #{$title-width}) / 2);
+// WARN(jordan): calc
+$title-left: calc(50% - #{$title-width / 2});
+// WARN(jordan): calc
 $loader-title-anim-left: calc(50% +
-  (#{$loader-logo-width} - #{$loader-title-width}) / 2);
+  (#{$loader-logo-width} - #{$title-width}) / 2);
+
+// title loaded anim
+$shadow-load-time: 1.5s;
+$load-shadow-props: $shadow-load-time linear 1;
+$flux-props: 3.5s ease-in-out $shadow-load-time infinite alternate;
+

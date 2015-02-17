@@ -76,9 +76,6 @@
              , load-title--2 0.9s ease-in-out 0.9s;
 
     &.loaded {
-      $shadow-load-time: 1.5s;
-      $load-shadow-props: $shadow-load-time linear 1;
-      $flux-props: 4s ease-in-out $shadow-load-time infinite alternate;
 
       opacity: 1;
 
@@ -90,5 +87,13 @@
                  , subtitle-flux $flux-props;
       }
     }
+  }
+}
+
+header * {
+  transition: text-shadow $shadow-load-time ease;
+
+  &.loaded {
+    text-shadow: 0 4px $epic-red;
   }
 }

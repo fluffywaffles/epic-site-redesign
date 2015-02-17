@@ -35,12 +35,20 @@ html, body {
 
   overflow-x: hidden;
 
-  font-size: 18pt;
+  font-size: 14pt;
+
+  @media #{$small} {
+    font-size: 16pt;
+  }
+
+  @media #{$medium} {
+    font-size: 18pt;
+  }
   font-weight: 400;
 }
 
 body {
-  background: #fafafa;
+  background: $off-white;
 
   font-family: $default-font-family;
   color: $font-color;
