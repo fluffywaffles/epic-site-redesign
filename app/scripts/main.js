@@ -5,6 +5,15 @@ var video = $('section#main video');
 var loaderComponents = $('#loader-underlay, .curtain, #main-logo, .title, .subtitle, header *');
 
 $('body').on('reveal', function() {
+  // NOTE(jordan): this is a really interesting hack.
+  // with html, body { height: 100%; overflow-x: hidden },
+  // section#main becomes the scrollable element, and
+  // elements positioned absolutely to body act as if
+  // they are position: fixed.
+  // So... when we want things to stay in place, position
+  // them relatively to their container. i.e.; section#main
+  $('section#main').css({ position: 'relative' });
+
   loaderComponents.addClass('animate load-animation');
 
   video[0].play();
