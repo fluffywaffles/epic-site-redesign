@@ -1,15 +1,15 @@
-// fonts
+// --- fonts
 $default-font-family: 'Lato', Helvetica, sans-serif;
 $font-color: #333;
 
 $title-font-size: 8rem;
 
-// colors
+// --- colors
 $classy-dark: #404040;
 $epic-red:    #d42a34;
 $off-white:   #f6f6f6;
 
-// loader positioning
+// --- loader positioning
 $loader-logo-width: $title-font-size * 3 / 2;
 // NOTE(jordan): unit conversion: divide by unit.
 $title-width: #{55 * $title-font-size / 1rem}px;
@@ -18,7 +18,7 @@ $title-margin-top: 0.33rem;
 $loader-logo-top: calc(50% - (#{$loader-logo-width} / 2));
 $loader-logo-left: $loader-logo-top;
 
-// loader anim
+// --- loader anim
 // WARN(jordan): calc
 $loader-logo-anim-left: calc(50% -
   (#{$loader-logo-width} + #{$title-width}) / 2);
@@ -28,12 +28,12 @@ $title-left: calc(50% - #{$title-width / 2});
 $loader-title-anim-left: calc(50% +
   (#{$loader-logo-width} - #{$title-width}) / 2);
 
-// title loaded anim
+// --- title loaded anim props
 $shadow-load-time: 1.5s;
 $load-shadow-props: $shadow-load-time linear 1;
 $flux-props: 3.5s ease-in-out $shadow-load-time infinite alternate;
 
-// mqs
+// --- mqs
 $small:  "(min-width: 550px)";
 $smed:   "(min-width: 750px)";
 $medium: "(min-width: 900px)";
