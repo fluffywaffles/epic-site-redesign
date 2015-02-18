@@ -22,13 +22,6 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('jade', function () {
-
-  return gulp.src('app/jade/**/*.jade')
-    .pipe($.jade({ pretty: true }))
-    .pipe(gulp.dest('.tmp/html'));
-});
-
 gulp.task('html', ['jade', 'styles'], function () {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
