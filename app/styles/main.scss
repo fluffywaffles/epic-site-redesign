@@ -20,6 +20,11 @@ section#main {
 
   margin: 0;
 
+  // NOTE(jordan): add back kinetic scrolling to iOS devices
+  // as per http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+
   nav {
 
     width: 95%;
@@ -187,6 +192,9 @@ section#apply {
 
     box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
 
+    position: relative;
+    z-index: 0;
+
     .main-application {
       width: 100%;
       max-width: 1150px;
@@ -222,27 +230,55 @@ section#apply {
 
         margin: 50px 0;
 
+        position: relative;
+        width: 100%;
+        left: -20px;
+
         border-color: $epic-red;
         border-width: 20px;
         border-style: solid;
 
-        &:before {
-          content: '.';
+        box-shadow: -2px -2px rgba(0,0,0,0.1)
+                  , 2px 2px rgba(0,0,0,0.1);
 
-          width: calc(100% + 40px);
-          height: 30px;
+        &:before {
+          content: '';
+
+          width: 0;
+          height: 20px;
 
           position: relative;
           left: -9999px;
-          top: -10px;
+          top: 0px;
 
           display: block;
+          z-index: -1;
 
           background: transparent;
-          color: transparent;
 
           border-left: 9979px solid darken($epic-red, 10%);
-          border-right: 9999px solid darken($epic-red, 10%);
+          border-bottom: 15px solid darken($epic-red, 10%);
+          border-right: 20px solid darken($epic-red, 5%);
+        }
+
+        &:after {
+          content: '';
+
+          width: 0;
+          height: 20px;
+
+          position: relative;
+          left: 100%;
+          top: -35px;
+
+          display: block;
+          z-index: -1;
+
+          background: transparent;
+
+          border-left: 20px solid darken($epic-red, 5%);
+          border-bottom: 15px solid darken($epic-red, 10%);
+          border-right: 9979px solid darken($epic-red, 10%);
         }
       }
 
