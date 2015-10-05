@@ -97,8 +97,4 @@
 
 header * {
   transition: text-shadow $shadow-load-time ease;
-
-  &.loaded {
-    text-shadow: 0 4px $epic-red;
-  }
 }
